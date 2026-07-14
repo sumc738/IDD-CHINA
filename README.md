@@ -1,6 +1,6 @@
 # IDD-CHINA
 
-> Code repository for: **" IDD-CHINA"**
+> Code repository for: **"IDD-CHINA"**
 >
 > Dai T, Liu J, Zhou J, et al.
 
@@ -31,8 +31,6 @@ Bayesian spatiotemporal models with Besag–York–Mollié (BYM2) spatial random
 | Spatial adjacency | City-level spatial neighbourhood matrix for BYM2 random effects |
 | Population | City-level population data and three SSP-aligned population projections |
 
-
-> **Note**: Raw surveillance data are not publicly deposited due to data-sharing restrictions. Data access requests should be directed to the corresponding authors. Processed climate and population inputs are described in the manuscript.
 
 ---
 
@@ -67,7 +65,7 @@ install.packages("INLA", repos = "https://inla.r-inla-download.org/R/stable")
 
 ---
 
-## Usage
+## UsageUsage
 
 > ⚠️ Data paths in the scripts are currently hard-coded absolute paths (e.g., `J:/IDD/DATA/...`). Before running, replace them with paths to your local data directory.
 
