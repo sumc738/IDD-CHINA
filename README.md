@@ -1,8 +1,11 @@
 # IDD-CHINA
 
-> Code repository for: **"Asymmetric expansion of infectious diarrhoeal disease risk in China under climate change"**
+> Code repository for: **" IDD-CHINA"**
 >
-> Dai T, Liu J, Zhou J, Zheng R, Wang X, Zhang L, Lu F, Tian L, Pei S, Zhou H\*, Guo P\*.
+> Dai T, Liu J, Zhou J, et al.
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21360055.svg)](https://doi.org/10.5281/zenodo.21360055)
+[![](https://img.shields.io/badge/license-Unlicense-blue.svg)](./LICENSE)
 
 ---
 
@@ -24,7 +27,6 @@ Bayesian spatiotemporal models with Besag–York–Mollié (BYM2) spatial random
 
 | Data type | Description |
 |-----------|-------------|
-| Disease surveillance | Monthly IDD case counts for 365 Chinese cities (2010–2022), aggregated to six pathogen-specific categories |
 | Climate variables | 29 indices including extreme temperature (TXx, TNn, TN10P, TX10P) and precipitation (PRCPTOT, etc.), from CN05.1 observations and CMIP6 projections |
 | Spatial adjacency | City-level spatial neighbourhood matrix for BYM2 random effects |
 | Population | City-level population data and three SSP-aligned population projections |
@@ -46,29 +48,6 @@ Bayesian spatiotemporal models with Besag–York–Mollié (BYM2) spatial random
    - Model selection via DIC / WAIC / CPO.
 4. **Future projection** — Best-fitting model applied to 60 SSP × GCM × population combinations (2023–2100).
 5. **Scenario analysis** — Mann–Kendall trend tests (`trend::sens.slope`) assess city-level temporal trends and relative changes under each scenario.
-
----
-
-## Repository structure
-
-```
-IDD-CHINA/
-├── Code/
-│   ├── modeling.R                      # INLA model fitting and cross-validation
-│   ├── spatial_variable_selection.R    # GAM(ziP)-based spatial variable screening
-│   ├── climate_dimension_reduction.R   # MAVE climate dimension reduction
-│   ├── Future_projection.R             # Future SSP × GCM scenario projections
-│   ├── future_scenario_analysis.R      # Scenario trend analysis and city-level summaries
-│   ├── fit_plot.R                      # Model fit and projection visualisation
-│   ├── sankey_plot_function.R          # Sankey diagram (population flow → infection)
-│   ├── inla.group.wrap function.R      # INLA quantile grouping helper
-│   ├── recode.exprs function.R         # Factor recoding utility
-│   ├── sens.recode function.R          # Trend significance classification
-│   ├── percent.diff function.R         # Relative difference computation
-│   └── write.model.diag.basic function.R  # Model diagnostics output
-├── LICENSE                             # Unlicense (public domain)
-└── README.md
-```
 
 ---
 
@@ -122,4 +101,9 @@ The code is released under the **Unlicense** (public domain; see `LICENSE` file)
 
 ## Code availability
 
-The code is publicly available at [https://github.com/TingtDai12/IDD-CHINA](https://github.com/TingtDai12/IDD-CHINA) under the Unlicense. Raw surveillance data are not publicly shareable; access requests should be directed to the corresponding authors (H.Z. and P.G.).
+The code is publicly available at [https://github.com/sumc738/IDD-CHINA](https://github.com/sumc738/IDD-CHINA) under the Unlicense. A permanent, citable snapshot of the code is archived on Zenodo:
+
+> **DOI:** [10.5281/zenodo.21360055](https://doi.org/10.5281/zenodo.21360055)
+> (corresponding to release **v1.0.0** — "Code accompanying manuscript submission")
+
+Raw surveillance data are not publicly shareable; access requests should be directed to the corresponding authors (H.Z. and P.G.).
